@@ -1,27 +1,57 @@
+<!--
+Schema Creator : http://schema-creator.org/person.php
+Schema.org - Person : http://schema.org/Person
+Google Help - Person Schema : https://support.google.com/webmasters/answer/146646?hl=en
+Outil de test des données structurées : http://www.google.com/webmasters/tools/richsnippets
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>
-			Microdatas – premier exemple simple
-		</title>
+		<title>Fiche personne</title>
+		<meta name="author" content="Myriam Dupont">
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	    <![endif]-->
 	</head>
 	<body>
-		Kirikou Dubois
-		Haute École de la Province de Liège
-		Enseignant
-		Infographie, intégration et design web
-		Rue des fleurs, 72
-		Outsiplou, -
-		4130
-		Belgique
-		monadresse@gmail.com
-		+3243556677
-		DOB: 01/11/2015
+		<div itemscope itemtype="http://schema.org/Person">
+			<a itemprop="url" href="http://www.monsite.be">
+				<div itemprop="name"><strong>Kirikou Dubois</strong></div>
+			</a>
+			<div itemscope itemtype="http://schema.org/Organization">
+				<span itemprop="name">Haute École de la Province de Liège</span>
+			</div>
+			<div itemprop="jobtitle">
+				Enseignant
+			</div>
+			<div itemprop="description">
+				Infographie, intégration et design web
+			</div>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<div itemprop="streetAddress">
+					Rue des Fleurs, 72
+				</div>
+				<div>
+					<span itemprop="addressLocality">Outsiplou</span>, <span itemprop="addressRegion">-</span>
+				</div>
+				<div itemprop="postalCode">
+					4130
+				</div>
+				<div itemprop="addressCountry">
+					Belgique
+				</div>
+			</div>
+			<div itemprop="email">
+				kirikou.dubois@gmail.com
+			</div>
+			<div itemprop="telephone">
+				+3243556677
+			</div>
+			<div>
+				<meta itemprop="birthDate" content="2015-01-11">DOB: 01/11/2015
+			</div>
+		</div>		
 	</body>
 </html>
-
-
